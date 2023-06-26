@@ -26,9 +26,18 @@ classes = pickle.load(open('./classes.pkl','rb'))
 
 def preprocess_user_input(user_input):
 
-    #tokenize
-    #stimize
-    #ordene
+    
+    #input_word_token_1 = (user_input)
+    #input_word_token_2 = (input_word_token_1, ignore_words) 
+    #input_word_token_2 = (input_word_token_2)))
+
+    #input_word_token_1 = word_tokenize(user_input)
+    #input_word_token_2 = words(input_word_token_1, ignore_words) 
+    #input_word_token_2 =(list(set(input_word_token_2)))
+
+    #input_word_token_1 = nltk.word_tokenize(user_input)
+    #input_word_token_2 = get_stem_words(input_word_token_1, ignore_words) 
+    #input_word_token_2 = sorted(list(set(input_word_token_2)))
 
     bag=[]
     bag_of_words = []
@@ -59,7 +68,12 @@ def bot_response(user_imput):
  
    predicted_class = classes[predicted_class_label]
 
-   #crie um for para gerar uma respostar aleatoriamente
+   for intent in intents['intents']:
+    if intent['tag']==predicted_class:
+       
+        #bot_response = rendom.choice(intent['responses'])
+        #bot_response = randomico.choice(intent['responses'])
+        #bot_response = random.choice(intent['responses'])
     
 
 
